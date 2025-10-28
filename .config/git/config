@@ -1,0 +1,16 @@
+[include]
+    path = ~/.gitconfig-private
+[commit]
+    gpgsign = true
+    verbose = true
+[core]
+    excludesfile = /home/james/.config/git/.gitignore
+[tag]
+    sort = version:refname
+    gpgSign = true
+[init]
+    defaultBranch = main
+[push]
+    autoSetupRemote = true
+[pull]
+    rebase = true
