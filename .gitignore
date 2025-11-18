@@ -5,5 +5,8 @@
 .config/*
 !.config/git/
 !.config/git/**
+!.config/zsh/
+!.config/zsh/**
+.config/zsh/.env
 !~/Work/*
 !~/Work/**
