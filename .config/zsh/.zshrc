@@ -53,9 +53,6 @@ source ~/.mds/functions/mds.sh
 # private environment variables.
 source ~/.config/zsh/.env
 
-# Docker compose backwards compatible alias.
-alias docker-compose="docker compose"
-
 # phpenv
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
