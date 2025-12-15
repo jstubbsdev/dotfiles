@@ -59,3 +59,12 @@ eval "$(phpenv init -)"
 
 # composer without memory limit
 alias dcomposer="php -d memory_limit=-1 $(which composer)"
+
+# hex <-> dec converters
+hex2dec () {
+    echo "ibase=16; $(echo $@ | tr '[:lower:]' '[:upper:]')" | bc
+}
+
+dec2hex () {
+    echo "obase=16; $@" | bc
+}
