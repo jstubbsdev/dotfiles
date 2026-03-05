@@ -36,16 +36,20 @@ fi
 
 unset env
 
+# Copilot CLI installation directory
+
+export PATH="$PATH:/$HOME/.local/bin"
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Applications directory
-export XDG_DATA_DIRS="/home/james/.local/share/applications:/usr/local/share:/usr/share"
+export XDG_DATA_DIRS="/$HOME/.local/share/applications:/usr/local/share:/usr/share"
 
 # MDS bin scripts
-export PATH="$PATH:/home/james/.mds/bin"
+export PATH="$PATH:/$HOME/.mds/bin"
 
 # Quick assume command.
 source ~/.mds/functions/mds.sh

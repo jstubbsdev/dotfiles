@@ -8,5 +8,6 @@
 !.config/zsh/
 !.config/zsh/**
 .config/zsh/.env
+!.zshrc
 !~/Work/*
 !~/Work/**
