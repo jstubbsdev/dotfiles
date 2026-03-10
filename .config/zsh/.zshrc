@@ -5,10 +5,6 @@ ZSH_THEME="af-magic"
 
 plugins=(git)
 
-# Auto select Node version.
-# @see: https://github.com/Sparragus/zsh-auto-nvm-use
-plugins+=(zsh-auto-nvm-use)
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -45,13 +41,24 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Auto select Node version.
+# This must be done after sourcing nvm.
+# @see: https://github.com/Sparragus/zsh-auto-nvm-use
+plugins+=(zsh-auto-nvm-use)
+
+source $ZSH/oh-my-zsh.sh
+
 # Applications directory
 export XDG_DATA_DIRS="/$HOME/.local/share/applications:/usr/local/share:/usr/share"
+
+# GPG fix (see https://stackoverflow.com/a/72788147)
+export GPG_TTY=$(tty)
 
 # MDS bin scripts
 export PATH="$PATH:/$HOME/.mds/bin"
 
 # Quick assume command.
+alias assume="source $(which assume)"
 source ~/.mds/functions/mds.sh
 
 # private environment variables.
