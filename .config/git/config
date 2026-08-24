@@ -16,3 +16,12 @@
     rebase = true
 [pager]
     branch = false
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/mnt/c/Users/JamesStubbs/AppData/Local/Microsoft/WindowsApps/op-ssh-sign-wsl.exe"
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
+[user]
+        email = james.stubbs@everyonetv.co.uk
+        name = James Stubbs
