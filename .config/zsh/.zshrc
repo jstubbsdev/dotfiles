@@ -34,13 +34,6 @@ export GPG_TTY=$(tty)
 # MDS bin scripts
 export PATH="$PATH:/$HOME/.mds/bin"
 
-# Quick assume command.
-alias assume="source $(which assume)"
-source ~/.mds/functions/mds.sh
-
-# private environment variables.
-source ~/.config/zsh/.env
-
 # composer without memory limit
 alias dcomposer="php -d memory_limit=-1 $(which composer)"
 
@@ -85,5 +78,12 @@ elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
 fi
 
 unset env
+
+# Quick assume command.
+alias assume="source $(which assume)"
+source ~/.mds/functions/mds.sh
+
+# private environment variables.
+source ~/.config/zsh/.env
 
 export DONT_PROMPT_WSL_INSTALL=1
